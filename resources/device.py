@@ -41,7 +41,6 @@ class Device(Resource):
 class InsereDevice(Resource):
     def post(self):
         dados = request.json
-
         device = Dispositivos(nome=dados['nome'], latitude=dados['latitude'], longitude=dados['longitude'])
         device.save()
         response = {
